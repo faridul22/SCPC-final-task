@@ -77,6 +77,36 @@ function findIndicesNumber(array, target) {
 const inputArray = [1, 3, 6, 8, 11, 15];
 const targetValue = 9;
 const result = findIndicesNumber(inputArray, targetValue);
-console.log(result);
+// console.log(result);
 
+
+function calculateTwoNumber(num1, num2, operator) {
+
+    if (typeof num1 !== "number" || typeof num2 !== "number") {
+        return "Please provide valid input number"
+    }
+    switch (operator) {
+        case '+':
+            return num1 + num2;
+        case '-':
+            return num1 - num2;
+        case '*':
+            return num1 * num2;
+        case '/':
+            if (num2 !== 0) {
+                return num1 / num2;
+            } else {
+                return "Cannot divide by zero";
+            }
+        default:
+            return "Please provide a valid operator";
+    }
+}
+
+const number1 = 3;
+const number2 = 2;
+const operator = "*";
+
+const result2 = calculateTwoNumber(number1, number2, operator);
+console.log(result2);
 
