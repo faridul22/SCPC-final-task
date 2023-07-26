@@ -1,3 +1,4 @@
+// Task-1
 const makeReverseString = text => {
     let reverse = '';
     for (let i = text.length - 1; i >= 0; i--) {
@@ -11,7 +12,7 @@ const reverse = makeReverseString(myString)
 // console.log(reverse)
 
 
-
+// Task-2
 const positiveNumbersSum = array => {
     let sum = 0;
     for (let i = 0; i < array.length; i++) {
@@ -28,7 +29,7 @@ const summation = positiveNumbersSum(array)
 // console.log(summation)
 
 
-
+// Task-3
 const findMaxFrequentElement = array => {
     const frequencyElement = {};
 
@@ -54,6 +55,28 @@ const findMaxFrequentElement = array => {
 }
 
 
-const inputArray = [3, 5, 2, 5, 3, 3, 1, 4, 5];
-const result = findMaxFrequentElement(inputArray);
-// console.log(result);
+const myArray = [3, 5, 2, 5, 3, 3, 1, 4, 5];
+const output = findMaxFrequentElement(myArray);
+// console.log(output);
+
+
+// Task-4
+function findIndicesNumber(array, target) {
+    const arrayLength = array.length;
+    for (let i = 1; i < arrayLength; i++) {
+        for (let p = 0; p < arrayLength; p++) {
+            if (array[i] + array[p] === target) {
+                return [i, p];
+            }
+        }
+    }
+
+    return null;
+}
+
+const inputArray = [1, 3, 6, 8, 11, 15];
+const targetValue = 9;
+const result = findIndicesNumber(inputArray, targetValue);
+console.log(result);
+
+
