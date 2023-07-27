@@ -1,4 +1,6 @@
-// Task-1
+/*
+Task 1 : This function takes a string as input and returns the reversed version of the string without using the built-in reverse() method
+*/
 const makeReverseString = text => {
     let reverse = '';
     for (let i = text.length - 1; i >= 0; i--) {
@@ -7,12 +9,13 @@ const makeReverseString = text => {
     }
     return reverse;
 }
-const myString = "hello world"
-const reverse = makeReverseString(myString)
-// console.log(reverse)
+
+// console.log(makeReverseString("hello world"))
 
 
-// Task-2
+/* 
+Task 2 : This function takes an array of numbers as input and returns the sum of all positive numbers in the array.
+*/
 const positiveNumbersSum = array => {
     let sum = 0;
     for (let i = 0; i < array.length; i++) {
@@ -24,13 +27,13 @@ const positiveNumbersSum = array => {
     return sum;
 }
 
-const array = [2, -5, 10, -3, 7];
-const summation = positiveNumbersSum(array)
-// console.log(summation)
+// console.log(positiveNumbersSum([2, -5, 10, -3, -7]))
 
 
-// Task-3
-const findMaxFrequentElement = array => {
+/* 
+Task 3: This JavaScript program finds and returns the most frequent element in an array.
+*/
+const findMostFrequentElement = array => {
     const frequencyElement = {};
 
     for (const element of array) {
@@ -50,17 +53,16 @@ const findMaxFrequentElement = array => {
             maxFrequency = frequencyElement[element];
         }
     }
-
-    return mostFrequentElement;
+    const result = parseFloat(mostFrequentElement)
+    return result;
 }
 
-
-const myArray = [3, 5, 2, 5, 3, 3, 1, 4, 5];
-const output = findMaxFrequentElement(myArray);
-// console.log(output);
+// console.log(findMostFrequentElement([3, 5, 2, 5, 3, 3, 1, 4, 5]));
 
 
-// Task-4
+/* 
+Task 4: This function takes a sorted array of numbers and a target value as input. The function should find two numbers in the array that add up to the target value. Return an array containing the indices of the two numbers.
+*/
 function findIndicesNumber(array, target) {
     const arrayLength = array.length;
     for (let i = 1; i < arrayLength; i++) {
@@ -74,13 +76,12 @@ function findIndicesNumber(array, target) {
     return null;
 }
 
-const inputArray = [1, 3, 6, 8, 11, 15];
-const targetValue = 9;
-const result = findIndicesNumber(inputArray, targetValue);
-// console.log(result);
+// console.log(findIndicesNumber([1, 3, 6, 8, 11, 15], 9));
 
 
-// Task-5
+/* 
+Task 5: This is a simple JavaScript calculator function. The calculator should take two numbers and an operator (+, -, *, /) as input and return the result of the operation.
+*/
 function calculateTwoNumber(num1, num2, operator) {
 
     if (typeof num1 !== "number" || typeof num2 !== "number") {
@@ -104,15 +105,12 @@ function calculateTwoNumber(num1, num2, operator) {
     }
 }
 
-const number1 = 3;
-const number2 = 2;
-const operator = "*";
-
-const result2 = calculateTwoNumber(number1, number2, operator);
-// console.log(result2);
+// console.log(calculateTwoNumber(3, 2, "*"))
 
 
-// Task-6
+/* 
+Task 6: This is a function that converts a Roman numeral to an integer. The function should take a Roman numeral string (e.g., "IX" or "XXI") as input and return the corresponding integer value.
+*/
 const romanToInteger = (romanStr) => {
     const romanHash = { I: 1, V: 5, X: 10, L: 50, C: 100, D: 500, M: 1000 };
     let integer = 0;
@@ -127,13 +125,14 @@ const romanToInteger = (romanStr) => {
 // console.log(romanToInteger('MCMLXXXIX'));
 
 
-// Task-7
+/* 
+Task 7: This function is for finding the second smallest element in an array of numbers. The function will return the second smallest number.
+*/
 const getSecondSmallest = array => {
-
     array.sort((a, b) => a - b);
     const secondSmallest = array[1];
     return secondSmallest;
 
 }
 
-console.log(getSecondSmallest([6, 3, 5, 7, 9, 1]));
+// console.log(getSecondSmallest([1, 6, 3, 5, 7, 9]));
