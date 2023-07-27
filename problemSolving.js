@@ -80,6 +80,7 @@ const result = findIndicesNumber(inputArray, targetValue);
 // console.log(result);
 
 
+// Task-5
 function calculateTwoNumber(num1, num2, operator) {
 
     if (typeof num1 !== "number" || typeof num2 !== "number") {
@@ -108,5 +109,19 @@ const number2 = 2;
 const operator = "*";
 
 const result2 = calculateTwoNumber(number1, number2, operator);
-console.log(result2);
+// console.log(result2);
 
+
+// Task-6
+const romanToInteger = (romanStr) => {
+    const romanHash = { I: 1, V: 5, X: 10, L: 50, C: 100, D: 500, M: 1000 };
+    let integer = 0;
+    for (let i = 0; i < romanStr.length; i++) {
+        const current = romanHash[romanStr[i]];
+        const next = romanHash[romanStr[i + 1]];
+        (current < next) ? (integer -= current) : (integer += current);
+    }
+    return integer;
+};
+
+// console.log(romanToInteger('MCMLXXXIX'));
