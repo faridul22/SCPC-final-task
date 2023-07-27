@@ -125,3 +125,15 @@ const romanToInteger = (romanStr) => {
 };
 
 // console.log(romanToInteger('MCMLXXXIX'));
+
+
+// Task-7
+const getSecondSmallest = array => {
+
+    array.sort((a, b) => a - b);
+    const secondSmallest = array[1];
+    return secondSmallest;
+
+}
+
+console.log(getSecondSmallest([6, 3, 5, 7, 9, 1]));
